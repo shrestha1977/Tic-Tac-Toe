@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  font-family: 'ALGERIAN', algerian;
+  background-color: lab(68.96% -17.24 -9.06);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.menu, .game {
+  background-color: hsl(77, 44%, 54%);
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+}
+
+h1 {
+  color: #333;
+}
+
+button {
+  margin: 10px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: hsl(13, 27%, 53%);
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+input {
+  margin: 8px 0;
+  padding: 10px;
+  width: 80%;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 80px); /* match width of cells */
+  gap: 2px; /* you can keep a small gap if needed */
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+.cell {
+  width: 80px;
+  height: 80px;
+  font-size: 2rem;
+  color: #333;
+  background-color: hsla(0, 0%, 91%, 0.425);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+.cell.taken {
+  pointer-events: none;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: hsl(325, 100%, 57%);
+}
